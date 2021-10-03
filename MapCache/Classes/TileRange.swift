@@ -28,49 +28,49 @@ public enum TileRangeError: Error {
 public struct TileRange: Sequence {
     
     /// Zoom level.
-    var zoom: Zoom
+    public var zoom: Zoom
     
     /// Min value of tile in X axis.
-    var minTileX: TileNumber
+    public var minTileX: TileNumber
     
     /// Max value of tile in X axis.
-    var maxTileX: TileNumber
+    public var maxTileX: TileNumber
     
     /// Min value of tile in Y axis.
-    var minTileY: TileNumber
+    public var minTileY: TileNumber
     
     /// Min value of tile in Y axis.
-    var maxTileY: TileNumber
+    public var maxTileY: TileNumber
     
     /// Difference between `maxTileX` and `minTileX`
-    var diffX : TileNumber {
+    public var diffX : TileNumber {
         get {
             return maxTileX - minTileX
         }
     }
     
     /// Difference between `maxTileY` and `minTileY`
-    var diffY : TileNumber {
+    public var diffY : TileNumber {
         get {
             return maxTileY - minTileY
         }
     }
     
     /// Number of rows in the range.
-    var rows : TileNumber {
+    public var rows : TileNumber {
         get {
             return diffY + 1
         }
     }
     /// Number of columns in the range.
-    var columns : TileNumber {
+    public var columns : TileNumber {
         get {
             return diffX + 1
         }
     }
     
     /// Counts the number of tiles in the range (columns x rows).
-    var count : TileNumber {
+    public var count : TileNumber {
         get {
             return rows * columns
         }
